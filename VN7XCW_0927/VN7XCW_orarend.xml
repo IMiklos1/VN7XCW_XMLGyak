@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<orarend>
+  <hetfo>
+      <ora id="web" tipus="gyakelmélet">
+          <targy>WEB-es alkalmazások C# </targy>
+          <idopont>
+              <nap>Hétfő</nap>
+              <tol>10</tol>
+              <ig>12</ig>
+          </idopont>
+          <helyszin>In/101 In I. e. 101 </helyszin>
+          <oktato>Dr. Mileff Péter</oktato>
+          <szak>Mérnökinformatikus</szak>
+      </ora>
+      <ora id="webtech" tipus="elmélet">
+          <targy>WEB technológiák </targy>
+          <idopont>
+              <nap>Hétfő</nap>
+              <tol>12</tol>
+              <ig>14</ig>
+          </idopont>
+          <helyszin>XXX A1 III. em. 305</helyszin>
+          <oktato>Agárdi Anita</oktato>
+          <szak>Mérnökinformatikus</szak>
+      </ora>
+      <ora id="mesint" tipus="elmélet">
+            <targy>Mesterséges intelligencia </targy>
+            <idopont>
+                <nap>Hétfő</nap>
+                <tol>14</tol>
+                <ig>17</ig>
+            </idopont>
+            <helyszin>XXXII A1 magasfsz</helyszin>
+            <oktato>Fazekas Levente</oktato>
+            <szak>Mérnökinformatikus</szak>
+        </ora>
+        <ora id="webtech" tipus="gyak">
+            <targy>WEB technológiák </targy>
+            <idopont>
+                <nap>Hétfő</nap>
+                <tol>17</tol>
+                <ig>19</ig>
+            </idopont>
+            <helyszin>n/101 In I. e. 101 </helyszin>
+            <oktato>Agárdi Anita</oktato>
+            <szak>Mérnökinformatikus</szak>
+        </ora>
+    </hetfo>
+  <Kedd>
+        <ora id="web" tipus="gyakelmélet">
+          <targy>WEB-es alkalmazások C# </targy>
+          <idopont>
+              <nap>Kedd</nap>
+              <tol>10</tol>
+              <ig>12</ig>
+          </idopont>
+          <helyszin>In/101 In I. e. 101 </helyszin>
+          <oktato>Dr. Mileff Péter</oktato>
+          <szak>Mérnökinformatikus</szak>
+        </ora>
+        <ora id="adatkez" tipus="elmélet">
+          <targy>Adatkezelés XML-ben </targy>
+          <idopont>
+              <nap>Kedd</nap>
+              <tol>12</tol>
+              <ig>14</ig>
+          </idopont>
+          <helyszin>I A2 fsz. </helyszin>
+          <oktato>Dr. Bednarik László</oktato>
+          <szak>Mérnökinformatikus</szak>
+        </ora>
+        <ora id="adatkez" tipus="gyak">
+          <targy>Adatkezelés XML-ben </targy>
+          <idopont>
+              <nap>Kedd</nap>
+              <tol>14</tol>
+              <ig>16</ig>
+          </idopont>
+          <helyszin>In/103 In I. em. 103</helyszin>
+          <oktato>Dr. Bednarik László</oktato>
+          <szak>Mérnökinformatikus</szak>
+        </ora>
+        <ora id="idegen" tipus="elmélet">
+           <targy>Idegennyelv 1</targy>
+           <idopont>
+                <nap>Kedd</nap>
+                <tol>16</tol>
+                <ig>18</ig>
+           </idopont>
+           <helyszin>A1/ 11 A1 magasfsz. 11</helyszin>
+           <oktato>Dorkó Dóra</oktato>
+           <szak>Mérnökinformatikus</szak>
+        </ora>
+        <ora id="idegen" tipus="gyak">
+           <targy>Mesterséges intelligencia</targy>
+           <idopont>
+                <nap>Kedd</nap>
+                <tol>18</tol>
+                <ig>19</ig>
+           </idopont>
+           <helyszin>In/15 In. fsz 15</helyszin>
+           <oktato>Fazekas Levente</oktato>
+           <szak>Mérnökinformatikus</szak>
+        </ora>
+  </Kedd>
+  <Szerda>
+        <ora id="szoftteszt" tipus="gyak">
+            <targy>Szoftvertesztelés</targy>
+            <idopont>
+                <nap>szerda</nap>
+                <tol>8</tol>
+                <ig>10</ig>
+            </idopont>
+            <helyszin>In/103 In I. em. 103</helyszin>
+            <oktato>Szoftvertesztelés</oktato>
+            <szak>Mérnökinformatikus</szak>
+        </ora>
+        <ora id="szoftteszt" tipus="gyak">
+            <targy>Szoftvertesztelés</targy>
+            <idopont>
+                 <nap>szerda</nap>
+                 <tol>8</tol>
+                 <ig>10</ig>
+            </idopont>
+            <helyszin>In/103 In I. em. 103</helyszin>
+            <oktato>Kunné Tamás Judit</oktato>
+            <szak>Mérnökinformatikus</szak>
+        </ora>
+        <ora id="szoftteszt" tipus="elmélet">
+             <targy>Szoftvertesztelés</targy>
+             <idopont>
+                   <nap>szerda</nap>
+                   <tol>10</tol>
+                   <ig>12</ig>
+             </idopont>
+             <helyszin>In/103 In I. em. 103</helyszin>
+             <oktato>Tompa Tamás</oktato>
+             <szak>Mérnökinformatikus</szak>
+        </ora>
+        <ora id="intrendsz" tipus="elmélet">
+             <targy>Integrált vállalati rendszerek</targy>
+             <idopont>
+                   <nap>szerda</nap>
+                   <tol>14</tol>
+                   <ig>16</ig>
+             </idopont>
+             <helyszin>A1/ 14 A1 magasfsz. 14</helyszin>
+             <oktato>Dr. Samad Dadvandipour</oktato>
+             <szak>Mérnökinformatikus</szak>
+        </ora>
+        <ora id="intrendsz2" tipus="gyak">
+              <targy>Integrált vállalati rendszerek</targy>
+              <idopont>
+                    <nap>szerda</nap>
+                    <tol>14</tol>
+                    <ig>16</ig>
+              </idopont>
+              <helyszin>In/15 In. fsz 15</helyszin>
+              <oktato>Dr. Kulcsárné Forrai Móni</oktato>
+              <szak>Mérnökinformatikus</szak>
+        </ora>
+  </Szerda>
+
+</orarend>

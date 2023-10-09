@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Konferencia>
+    <cim>Cim</cim>
+    <datum>2019.09.21</datum>
+    <Helyszin>Szeged</Helyszin>
+    <eloado>
+    	<nev>Bela</nev>
+    	<adoszam>34789610</adoszam>
+    	<lakcim>Körösladany Damjanich u20/1</lakcim>
+    </eloado>
+	<Hallgatok>
+		<Hallgato>
+			<nev>Janos</nev>
+			<lakcim>Miskolc</lakcim> 
+		</Hallgato>
+		<Hallgato>
+			<nev>Benedek</nev>
+			<lakcim>Budapest</lakcim> 
+		</Hallgato>
+	</Hallgatok>
+    
+      
+</Konferencia>
