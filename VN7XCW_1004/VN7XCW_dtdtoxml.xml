@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE model SYSTEM "VN7XCW_ertodtd.dtd">
+<model>
+    <A Aa="fak">
+        <Ac>
+            <Acd></Acd>
+            <Ace></Ace>
+        </Ac>
+    </A>
+    <B Ba="wre">
+        <Bb>
+            <Bbx></Bbx>
+            <Bby></Bby>
+        </Bb>
+    </B>
+    <C Ca="gfe">
+        <Cb></Cb>
+    </C>
+    <A_B>
+        <A_Bc></A_Bc>
+    </A_B>
+</model>
