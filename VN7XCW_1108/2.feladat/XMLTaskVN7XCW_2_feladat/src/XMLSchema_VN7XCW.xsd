@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="XMLSchema_VN7XCW">
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+                <!-- Employee -->
+                <xs:element name="Employee" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ID" type="xs:string"/>
+                            <xs:element name="FirstName" type="xs:string"/>
+                            <xs:element name="LastName" type="xs:string"/>
+                            <xs:element name="PhoneNumber" type="xs:string"/>
+                            <xs:element name="Email" type="xs:string"/>
+                            <xs:element name="MedicalNumber" type="xs:string"/>
+                            <xs:element name="DateOfBirth" type="xs:date"/>
+                            <xs:element name="BankAccountNumber" type="xs:string"/>
+                            <xs:element name="Payment" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- Works -->
+                <xs:element name="Works" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="EmpID" type="xs:string"/>
+                            <xs:element name="ResID" type="xs:string"/>
+                            <xs:element name="FromWhen" type="xs:date"/>
+                            <xs:element name="IsLeader" type="xs:boolean"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- Restaurant -->
+                <xs:element name="Restaurant" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ID" type="xs:string"/>
+                            <xs:element name="Name" type="xs:string"/>
+                            <xs:element name="PhoneNumber" type="xs:string"/>
+                            <xs:element name="Email" type="xs:string"/>
+                            <xs:element name="Country" type="xs:string"/>
+                            <xs:element name="City" type="xs:string"/>
+                            <xs:element name="Street" type="xs:string"/>
+                            <xs:element name="HouseNumber" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- Order -->
+                <xs:element name="Order" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ID" type="xs:string"/>
+                            <xs:element name="PaymentType" type="xs:string"/>
+                            <xs:element name="ResID" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- OrderedProducts -->
+                <xs:element name="OrderedProducts" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ProID" type="xs:string"/>
+                            <xs:element name="OrdID" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- Product -->
+                <xs:element name="Product" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ID" type="xs:string"/>
+                            <xs:element name="Name" type="xs:string"/>
+                            <xs:element name="Type" type="xs:string"/>
+                            <xs:element name="Price" type="xs:decimal"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- ContainedIngredients -->
+                <xs:element name="ContainedIngredients" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="IngID" type="xs:string"/>
+                            <xs:element name="ProID" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- Ingredients -->
+                <xs:element name="Ingredients" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ID" type="xs:string"/>
+                            <xs:element name="Ingredient" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- CustomerOrder -->
+                <xs:element name="CustomerOrder" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="CusID" type="xs:string"/>
+                            <xs:element name="OrdID" type="xs:string"/>
+                            <xs:element name="DateAndTime" type="xs:dateTime"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- Customer -->
+                <xs:element name="Customer" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ID" type="xs:string"/>
+                            <xs:element name="FirstName" type="xs:string"/>
+                            <xs:element name="LastName" type="xs:string"/>
+                            <xs:element name="PhoneNumber" type="xs:string"/>
+                            <xs:element name="Email" type="xs:string"/>
+                            <xs:element name="DateOfBirth" type="xs:date"/>
+                            <xs:element name="Country" type="xs:string"/>
+                            <xs:element name="City" type="xs:string"/>
+                            <xs:element name="Street" type="xs:string"/>
+                            <xs:element name="HouseNumber" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
