@@ -1,15 +1,13 @@
-//package hu.domparse.vn7xcw;
+package src;
 
 import org.w3c.dom.*;
 import javax.xml.parsers.*;
 import java.io.File;
 public class DomReadVN7XCW {
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
-
         try {
 
-            File xmlFile = new File("src/XML_VN7XCW.xml");
+            File xmlFile = new File("VN7XCW_XML_Task/2_feladat/XMLTaskVN7XCW_2_feladat/src/XML_VN7XCW.xml");
 
             if(!xmlFile.exists())
             {
