@@ -1,0 +1,32 @@
+<class>
+    <student id="1">
+        <keresztnev>Ferenc</keresztnev>
+        <vezeteknev>Németh</vezeteknev>
+        <becenev>Feri</becenev>
+        <kor>20</kor>
+    </student>
+    <student id="2">
+        <keresztnev>Emese</keresztnev>
+        <vezeteknev>Takács</vezeteknev>
+        <becenev>Emi</becenev>
+        <kor>22</kor>
+    </student>
+    <student id="3">
+        <keresztnev>Gergely</keresztnev>
+        <vezeteknev>Molnár</vezeteknev>
+        <becenev>Geri</becenev>
+        <kor>21</kor>
+    </student>
+    <student id="4">
+        <keresztnev>Helga</keresztnev>
+        <vezeteknev>Papp</vezeteknev>
+        <becenev>Heli</becenev>
+        <kor>18</kor>
+    </student>
+    <student id="5">
+        <keresztnev>Lilla</keresztnev>
+        <vezeteknev>Varga</vezeteknev>
+        <becenev>Lili</becenev>
+        <kor>25</kor>
+    </student>
+</class>

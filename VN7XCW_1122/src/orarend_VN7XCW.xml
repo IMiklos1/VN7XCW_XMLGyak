@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VN7XCW_kurzusfelvetel tanev="2023/2024" egyetem="ME">
+    <hallgato>
+        <hnev>István Miklós</hnev>
+        <szulev>2002-12-28</szulev>
+        <szak evf="3">Mérnökinformatikus</szak>
+    </hallgato>
+    <kurzusok>
+        <kurzus id="VN7XCW" jovahagyas="igen">
+            <kurzusnev>Szoftvertesztelés</kurzusnev>
+            <kredit>5</kredit>
+            <hely>Inf/103</hely>
+            <idopont>Hétfő 10-12</idopont>
+            <oktato>Dr. Hornyák Olivér</oktato>
+        </kurzus>
+        <kurzus id="VN7XCW">
+            <kurzusnev>WEB technológiák1</kurzusnev>
+            <kredit>5</kredit>
+            <hely>Inf/101</hely>
+            <idopont>Hétfő 14-16</idopont>
+            <oktato>Agárdi Anita</oktato>
+        </kurzus>
+        <kurzus id="VN7XCW">
+            <kurzusnev>Mesterséges intelligencia</kurzusnev>
+            <kredit>5</kredit>
+            <hely>XXXII ea</hely>
+            <idopont>Kedd 10-12</idopont>
+            <oktato>Dr. Kunné Tamás Judit</oktato>
+            <oraado>Fazekas Levente</oraado>
+        </kurzus>
+        <kurzus id="VN7XCW">
+            <kurzusnev>Adatkezelés XML-ben</kurzusnev>
+            <kredit>5</kredit>
+            <hely>XXXII ea</hely>
+            <idopont>Kedd 12-14</idopont>
+            <oktato>Dr. Bednarik László</oktato>
+        </kurzus>
+        <kurzus id="VN7XCW">
+            <kurzusnev>WEB-es alkalmazások Java</kurzusnev>
+            <kredit>5</kredit>
+            <hely>Teams</hely>
+            <idopont>Szerda 14-16</idopont>
+            <oktato>Selmeci Viktor</oktato>
+        </kurzus>
+        <kurzus id="VN7XCW">
+            <kurzusnev>Integrált vállalati rendszerek</kurzusnev>
+            <kredit>5</kredit>
+            <hely>X ea</hely>
+            <idopont>Szerda 12-14</idopont>
+            <oktato>Dr. Samad Dadvandipour</oktato>
+        </kurzus>
+    </kurzusok>
+
+</VN7XCW_kurzusfelvetel>
