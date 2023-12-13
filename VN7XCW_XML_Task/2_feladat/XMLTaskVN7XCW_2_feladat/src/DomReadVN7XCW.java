@@ -1,16 +1,14 @@
 package src;
-
 import org.w3c.dom.*;
 import javax.xml.parsers.*;
 import java.io.File;
+
 public class DomReadVN7XCW {
     public static void main(String[] args) {
         try {
-
             File xmlFile = new File("VN7XCW_XML_Task/2_feladat/XMLTaskVN7XCW_2_feladat/src/XML_VN7XCW.xml");
 
-            if(!xmlFile.exists())
-            {
+            if (!xmlFile.exists()) {
                 System.out.println("The file not found.");
                 return;
             }
@@ -28,19 +26,24 @@ public class DomReadVN7XCW {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     private static void WriteOutContent(Node node, String indent) {
         if (node.getNodeType() == Node.ELEMENT_NODE) {
-            System.out.println(indent + node.getNodeName());
+            System.out.print(indent + "<" + node.getNodeName());
 
             if (node.hasAttributes()) {
                 NamedNodeMap attrib = node.getAttributes();
                 for (int i = 0; i < attrib.getLength(); i++) {
                     Node attribute = attrib.item(i);
-                    System.out.println(indent + attribute.getNodeName() + " = " + attribute.getNodeValue());
+                    System.out.print(" " + attribute.getNodeName() + "=\"" + attribute.getNodeValue() + "\"");
                 }
+            }
+
+            if (!node.hasChildNodes() || node.getFirstChild().getNodeType() == Node.TEXT_NODE) {
+                System.out.println(">");
+            } else {
+                System.out.println(">");
             }
 
             if (node.hasChildNodes()) {
@@ -49,6 +52,7 @@ public class DomReadVN7XCW {
                     Node child = childList.item(i);
                     WriteOutContent(child, indent + "  ");
                 }
+                System.out.println(indent + "</" + node.getNodeName() + ">");
             }
         } else if (node.getNodeType() == Node.TEXT_NODE) {
             String data = node.getNodeValue().trim();
@@ -57,5 +61,5 @@ public class DomReadVN7XCW {
             }
         }
     }
-
 }
+

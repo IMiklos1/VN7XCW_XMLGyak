@@ -19,9 +19,9 @@ public class DOMWrite_VN7XCW {
 
             Element rootElement = doc.getDocumentElement();
             System.out.println("Root element: " + rootElement.getNodeName());
-            writeOutContent(rootElement, "");
+            WriteOutContent(rootElement, "");
 
-            writeToFile(doc, "VN7XCW_XML_Task/2_feladat/XMLTaskVN7XCW_2_feladat/src/New_XML_VN7XCW.xml"); // Create new xml file
+            writeToFile(doc, "VN7XCW_XML_Task/2_feladat/XMLTaskVN7XCW_2_feladat/src/XML_VN7XCW1.xml"); // Create new xml file
 
             System.out.println("Updated version of XML saved into New_XML_VN7XCW.xml file");
 
@@ -30,24 +30,31 @@ public class DOMWrite_VN7XCW {
         }
     }
 
-    private static void writeOutContent(Node node, String indent) {
+    private static void WriteOutContent(Node node, String indent) {
         if (node.getNodeType() == Node.ELEMENT_NODE) {
-            System.out.println(indent + node.getNodeName());
+            System.out.print(indent + "<" + node.getNodeName());
 
             if (node.hasAttributes()) {
                 NamedNodeMap attrib = node.getAttributes();
                 for (int i = 0; i < attrib.getLength(); i++) {
                     Node attribute = attrib.item(i);
-                    System.out.println(indent + attribute.getNodeName() + " = " + attribute.getNodeValue());
+                    System.out.print(" " + attribute.getNodeName() + "=\"" + attribute.getNodeValue() + "\"");
                 }
+            }
+
+            if (!node.hasChildNodes() || node.getFirstChild().getNodeType() == Node.TEXT_NODE) {
+                System.out.println(">");
+            } else {
+                System.out.println(">");
             }
 
             if (node.hasChildNodes()) {
                 NodeList childList = node.getChildNodes();
                 for (int i = 0; i < childList.getLength(); i++) {
                     Node child = childList.item(i);
-                    writeOutContent(child, indent + "  ");
+                    WriteOutContent(child, indent + "  ");
                 }
+                System.out.println(indent + "</" + node.getNodeName() + ">");
             }
         } else if (node.getNodeType() == Node.TEXT_NODE) {
             String data = node.getNodeValue().trim();
