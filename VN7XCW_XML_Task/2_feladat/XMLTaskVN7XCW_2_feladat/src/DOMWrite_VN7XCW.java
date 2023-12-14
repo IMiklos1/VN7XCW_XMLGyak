@@ -11,11 +11,7 @@ public class DOMWrite_VN7XCW {
     public static void main(String[] args) {
         try {
 
-            File xmlFile = new File("VN7XCW_XML_Task/2_feladat/XMLTaskVN7XCW_2_feladat/src/XML_VN7XCW.xml");
-            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-            Document doc = dBuilder.parse(xmlFile);
-            doc.getDocumentElement().normalize();
+            Document doc = createSampleXML();
 
             Element rootElement = doc.getDocumentElement();
             System.out.println("Root element: " + rootElement.getNodeName());
@@ -23,16 +19,38 @@ public class DOMWrite_VN7XCW {
 
             writeToFile(doc, "VN7XCW_XML_Task/2_feladat/XMLTaskVN7XCW_2_feladat/src/XML_VN7XCW1.xml"); // Create new xml file
 
-            System.out.println("Updated version of XML saved into New_XML_VN7XCW.xml file");
+            System.out.println("Updated version of XML saved into XML_VN7XCW1.xml file");
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    private static Document createSampleXML() {
+        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder dBuilder;
+        Document doc = null;
+
+        try {
+            dBuilder = dbFactory.newDocumentBuilder();
+            doc = dBuilder.newDocument();
+
+            Element rootElement = doc.createElement("employees");
+            doc.appendChild(rootElement);
+
+            Element employee = createEmployeeElement(doc, "E001", "R001", "Miklós", "M123", "ABC123456", "1990-05-15", "No");
+            rootElement.appendChild(employee);
+
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        }
+        return doc;
+    }
+
     private static void WriteOutContent(Node node, String indent) {
         if (node.getNodeType() == Node.ELEMENT_NODE) {
             System.out.print(indent + "<" + node.getNodeName());
+
 
             if (node.hasAttributes()) {
                 NamedNodeMap attrib = node.getAttributes();
@@ -43,26 +61,43 @@ public class DOMWrite_VN7XCW {
             }
 
             if (!node.hasChildNodes() || node.getFirstChild().getNodeType() == Node.TEXT_NODE) {
-                System.out.println(">");
+
+                System.out.print(">");
+
             } else {
-                System.out.println(">");
+                if(node.toString().startsWith("which_product"))
+                {
+                    System.out.println(">");
+
+                }
             }
 
             if (node.hasChildNodes()) {
                 NodeList childList = node.getChildNodes();
+                boolean hasTextChild = false;
                 for (int i = 0; i < childList.getLength(); i++) {
                     Node child = childList.item(i);
-                    WriteOutContent(child, indent + "  ");
+                    if (child.getNodeType() == Node.TEXT_NODE && !child.getNodeValue().trim().isEmpty()) {
+                        System.out.print(indent + "  " + child.getNodeValue().trim());
+                        hasTextChild = true;
+                    } else if (child.getNodeType() == Node.ELEMENT_NODE) {
+                        WriteOutContent(child, indent + "  ");
+                    }
                 }
-                System.out.println(indent + "</" + node.getNodeName() + ">");
+                if (!hasTextChild) {
+                    System.out.println(indent + "</" + node.getNodeName() + ">");
+                } else {
+                    System.out.println(indent + "</" + node.getNodeName() + ">");
+                }
             }
         } else if (node.getNodeType() == Node.TEXT_NODE) {
             String data = node.getNodeValue().trim();
             if (!data.isEmpty()) {
-                System.out.println(indent + data);
+                System.out.print(data);
             }
         }
     }
+
 
     public static void writeToFile(Document doc, String filename) {
         try {
@@ -77,4 +112,26 @@ public class DOMWrite_VN7XCW {
             e.printStackTrace();
         }
     }
+
+    private static Element createEmployeeElement(Document doc, String id, String work, String fullName, String medicalNumber,
+                                                 String bankAccountNumber, String dateOfBirth, String isLeader) {
+        Element employee = doc.createElement("employee");
+        employee.setAttribute("id", id);
+        employee.setAttribute("work", work);
+
+        createElementWithValue(doc, employee, "fullName", fullName);
+        createElementWithValue(doc, employee, "medicalNumber", medicalNumber);
+        createElementWithValue(doc, employee, "bankAccountNumber", bankAccountNumber);
+        createElementWithValue(doc, employee, "dateOfBirth", dateOfBirth);
+        createElementWithValue(doc, employee, "isLeader", isLeader);
+
+        return employee;
+    }
+
+    private static void createElementWithValue(Document doc, Element parentElement, String elementName, String value) {
+        Element element = doc.createElement(elementName);
+        element.appendChild(doc.createTextNode(value));
+        parentElement.appendChild(element);
+    }
 }
+

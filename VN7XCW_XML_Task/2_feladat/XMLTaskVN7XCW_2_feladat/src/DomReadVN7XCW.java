@@ -32,6 +32,7 @@ public class DomReadVN7XCW {
         if (node.getNodeType() == Node.ELEMENT_NODE) {
             System.out.print(indent + "<" + node.getNodeName());
 
+
             if (node.hasAttributes()) {
                 NamedNodeMap attrib = node.getAttributes();
                 for (int i = 0; i < attrib.getLength(); i++) {
@@ -41,25 +42,42 @@ public class DomReadVN7XCW {
             }
 
             if (!node.hasChildNodes() || node.getFirstChild().getNodeType() == Node.TEXT_NODE) {
-                System.out.println(">");
+
+                System.out.print(">");
+
             } else {
+                if(node.toString().startsWith("which_product"))
+                {
                 System.out.println(">");
+
+                }
             }
 
             if (node.hasChildNodes()) {
                 NodeList childList = node.getChildNodes();
+                boolean hasTextChild = false;
                 for (int i = 0; i < childList.getLength(); i++) {
                     Node child = childList.item(i);
-                    WriteOutContent(child, indent + "  ");
+                    if (child.getNodeType() == Node.TEXT_NODE && !child.getNodeValue().trim().isEmpty()) {
+                        System.out.print(indent + "  " + child.getNodeValue().trim());
+                        hasTextChild = true;
+                    } else if (child.getNodeType() == Node.ELEMENT_NODE) {
+                        WriteOutContent(child, indent + "  ");
+                    }
                 }
-                System.out.println(indent + "</" + node.getNodeName() + ">");
+                if (!hasTextChild) {
+                    System.out.println(indent + "</" + node.getNodeName() + ">");
+                } else {
+                    System.out.println(indent + "</" + node.getNodeName() + ">");
+                }
             }
         } else if (node.getNodeType() == Node.TEXT_NODE) {
             String data = node.getNodeValue().trim();
             if (!data.isEmpty()) {
-                System.out.println(indent + data);
+                System.out.print(data);
             }
         }
     }
+
 }
 
